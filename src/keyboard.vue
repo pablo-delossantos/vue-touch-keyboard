@@ -280,9 +280,9 @@
 
 <style lang="sass">
 		
-	$width: 40;
+	$width: 39;
 	$height: 2.2em;
-	$margin: 0.5em;
+	$margin: 0.85em;
 	// $radius: 0.35em;
 
 	.vue-touch-keyboard {
@@ -301,7 +301,7 @@
 			
 			.key {
 				&:not(:last-child) {
-					margin-right: $margin;
+					margin-right: $margin /2;
 				}
 
 				flex: $width;
@@ -327,7 +327,7 @@
 					background-image: url("./icons/backspace.svg");
 					background-position: center center;
 					background-repeat: no-repeat;
-					background-size: 35%;
+					// background-size: 35%;
 				}
 			
 				&.half {
