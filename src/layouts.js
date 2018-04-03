@@ -77,7 +77,7 @@ module.exports = {
 	"numeric": {
 
 		_meta: {
-			"backspace": { func: "backspace", classes: "control"},
+			"backspace": { func: "backspace", classes: "control test"},
 			"accept": { func: "accept", text: "Close", classes: "control featured"},
 			"next": { func: "next", text: "Next", classes: "control featured"},
 			"zero": { key: "0", width: 130}
@@ -87,7 +87,7 @@ module.exports = {
 			"1 2 3",
 			"4 5 6",
 			"7 8 9",
-			"{backspace} {zero} {next} {accept}"
+			"{backspace} {next} {zero} {accept}"
 		]
 	}
 
