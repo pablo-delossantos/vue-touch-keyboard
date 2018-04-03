@@ -340,17 +340,9 @@
 					border-color: #0055a6;
 				}
 
-				&.test {
-					color: #fff;
-					background-color: yellow;
-					border-color: #0055a6;
-          position:absolute;
-          left:100px;
-				}
-							
 				&.featured {
 					color: #fff;
-					background-color: red;
+					background-color: #009bdb;
 					border-color: #0055a6;
 				}
 
