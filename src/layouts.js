@@ -28,14 +28,14 @@ module.exports = {
 			"{shiftl} Z X C V B N M < > ? {shiftr}",
 			"{next} {space} {accept}"
 		],
-		
+
 		capsed: [
 			"` 1 2 3 4 5 6 7 8 9 0 - = {backspace}",
 			"{tab} Q W E R T Y U I O P [ ] \\",
 			"{caps} A S D F G H J K L ; ' {enter}",
-			"{shiftl} Z X C V B N M , . / {shiftr}", 
+			"{shiftl} Z X C V B N M , . / {shiftr}",
 			"{next} {space} {accept}"
-		]		
+		]
 	},
 
 	"compact": {
@@ -78,9 +78,9 @@ module.exports = {
 
 		_meta: {
 			"backspace": { func: "backspace", classes: "control"},
-			"accept": { func: "accept", text: "Close", classes: "control featured"},
-			"next": { func: "next", text: "Next", classes: "control featured"},
-			"zero": { key: "0", width: 130}
+			"accept": { func: "accept", text: "Siguiente", classes: "control featured"},
+			"next": { func: "next", text: "Volver", classes: "control featured"},
+			"zero": { key: "0"}
 		},
 
 		default: [
