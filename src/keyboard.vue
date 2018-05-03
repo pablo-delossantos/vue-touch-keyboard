@@ -3,7 +3,7 @@
 		// input(type="text", v-model="keyboardText", v-if="!input")
 		.keyboard
 			.line(v-for="(line, index) in keySet", key="index")
-				span(v-for="(key, index) in line", key="index", :class="getClassesOfKey(key)", v-text="getCaptionOfKey(key)", @click="clickKey(key)", @mousedown="mousedown", :style="getKeyStyle(key)")
+				span(v-for="(key, index) in line", key="index", :class="getClassesOfKey(key)", v-text="getCaptionOfKey(key)", @click="clickKey(key)", @mousedown="mousedown", @touchend="touchend", :style="getKeyStyle(key)")
 
 </template>
 
@@ -182,6 +182,10 @@
 				//console.log("mousedown: ", this.input.scrollLeft, this.input.scrollWidth, this.input.clientWidth);
 			},
 
+			touchend() {
+				
+			},
+
 			clickKey(key) {
 				if (!this.input) return;
 
@@ -339,7 +343,7 @@
 					background-color: #009bdb;
 					border-color: #0055a6;
 				}
-							
+
 				&.featured {
 					color: #fff;
 					background-color: #009bdb;
@@ -351,12 +355,12 @@
 					background-color: #0055a6;
 					border-color: #009bdb;
 				}
-				
+
 				&:active {
 					transform: scale(.98); // translateY(1px);
-					color: #000;
-					background-color: #fff;
-					border-color: #0055a6;					
+					color: #fff;
+					background-color: #0055a6#009bdb;
+					border-color: #009bdb;
 				}
 
 				&.activated {
