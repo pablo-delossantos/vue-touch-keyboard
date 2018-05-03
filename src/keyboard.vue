@@ -363,9 +363,9 @@
 				
 				&:active {
 					transform: scale(.98); // translateY(1px);
-					color: #000;
-					background-color: #fff;
-					border-color: #0055a6;					
+					color: #fff;
+					background-color: #0055a6;
+					border-color: #009bdb;
 				}
 
 				&.activated {
