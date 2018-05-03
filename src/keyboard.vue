@@ -3,7 +3,7 @@
 		// input(type="text", v-model="keyboardText", v-if="!input")
 		.keyboard
 			.line(v-for="(line, index) in keySet", key="index")
-				span(v-for="(key, index) in line", key="index", :class="getClassesOfKey(key)", v-text="getCaptionOfKey(key)", @click="clickKey(key)", @mousedown="mousedown", @touchend="fix" :style="getKeyStyle(key)")
+				span(v-for="(key, index) in line", key="index", :class="getClassesOfKey(key)", v-text="getCaptionOfKey(key)", @click="clickKey(key)", @mousedown="mousedown", @touchend="fix", :style="getKeyStyle(key)")
 
 </template>
 
@@ -182,14 +182,14 @@
 				//console.log("mousedown: ", this.input.scrollLeft, this.input.scrollWidth, this.input.clientWidth);
 			},
 
-                        fix() {
-                            var el = this
-                            var par = el.parentNode
-                            var next = el.nextSibling
-                            par.removeChild(el)
-                            setTimeout(function() {par.insertBefore(el, next);}, 0)
-                            console.log("FIX")
-                        }
+			fix() {
+				console.log("FIX");
+				const el = this;
+				const par = el.parentNode;
+				const next = el.nextSibling;
+				par.removeChild(el);
+				setTimeout(function() {par.insertBefore(el, next);}, 0);
+			},
 
 			clickKey(key) {
 				if (!this.input) return;
