@@ -185,11 +185,6 @@
 			fix() {
 				console.log("FIX");
 				console.log(this);
-				const el = this;
-				const par = el.parentNode;
-				const next = el.nextSibling;
-				par.removeChild(el);
-				setTimeout(function() {par.insertBefore(el, next);}, 0);
 			},
 
 			clickKey(key) {
@@ -360,6 +355,13 @@
 					color: #fff;
 					background-color: #0055a6;
 					border-color: #009bdb;
+				}
+
+				&:active {
+					transform: scale(.98); // translateY(1px);
+					color: #fff;
+					background-color: #009bdb;
+					border-color: #0055a6;
 				}
 
 				&.activated {
