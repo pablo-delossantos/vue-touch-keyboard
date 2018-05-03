@@ -271,7 +271,7 @@
 			},
 			
 			setFocusToInput(caret) {
-				this.input.focus();
+				//this.input.focus();
 				if (caret && this.supportsSelection()) {
 					this.input.selectionStart = caret.start;
 					this.input.selectionEnd = caret.end;
@@ -355,9 +355,8 @@
 					background-color: #009bdb;
 					border-color: #0055a6;
 				}
-				
-				&:active {
-					transform: scale(.98); // translateY(1px);
+
+				&:hover {
 					color: #fff;
 					background-color: #0055a6;
 					border-color: #009bdb;
