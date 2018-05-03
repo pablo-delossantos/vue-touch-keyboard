@@ -3,7 +3,7 @@
 		// input(type="text", v-model="keyboardText", v-if="!input")
 		.keyboard
 			.line(v-for="(line, index) in keySet", key="index")
-				span(v-for="(key, index) in line", key="index", :class="getClassesOfKey(key)", v-text="getCaptionOfKey(key)", @click="clickKey(key)", @mousedown="mousedown", @touchend="fix", :style="getKeyStyle(key)")
+				span(v-for="(key, index) in line", key="index", :class="getClassesOfKey(key)", v-text="getCaptionOfKey(key)", @click="clickKey(key)", @mousedown="mousedown", @touchend="touchend", :style="getKeyStyle(key)")
 
 </template>
 
@@ -182,9 +182,8 @@
 				//console.log("mousedown: ", this.input.scrollLeft, this.input.scrollWidth, this.input.clientWidth);
 			},
 
-			fix() {
-				console.log("FIX");
-				console.log(this);
+			touchend() {
+				
 			},
 
 			clickKey(key) {
@@ -266,7 +265,7 @@
 			},
 			
 			setFocusToInput(caret) {
-				//this.input.focus();
+				this.input.focus();
 				if (caret && this.supportsSelection()) {
 					this.input.selectionStart = caret.start;
 					this.input.selectionEnd = caret.end;
@@ -360,8 +359,8 @@
 				&:active {
 					transform: scale(.98); // translateY(1px);
 					color: #fff;
-					background-color: #009bdb;
-					border-color: #0055a6;
+					background-color: #0055a6#009bdb;
+					border-color: #009bdb;
 				}
 
 				&.activated {
