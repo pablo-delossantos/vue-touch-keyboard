@@ -355,12 +355,6 @@
 					background-color: #009bdb;
 					border-color: #0055a6;
 				}
-
-				&:hover {
-					color: #fff;
-					background-color: #0055a6;
-					border-color: #009bdb;
-				}
 				
 				&:active {
 					transform: scale(.98); // translateY(1px);
