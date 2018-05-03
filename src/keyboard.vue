@@ -184,6 +184,7 @@
 
 			fix() {
 				console.log("FIX");
+				console.log(this);
 				const el = this;
 				const par = el.parentNode;
 				const next = el.nextSibling;
